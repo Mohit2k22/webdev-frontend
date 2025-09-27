@@ -1,0 +1,205 @@
+
+    * { box-sizing: border-box; 
+    
+    
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: whitesmoke;
+      background-image: url(img/caculatorappbg\ \(1\).png);
+      
+      background-repeat: no-repeat;
+      background-size: cover;
+      /* background: #1d1c1c; */
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 500px;
+      margin: auto;
+      
+
+      background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.8),
+    transparent
+  );
+}
+
+.glass-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.8),
+    transparent,
+    rgba(255, 255, 255, 0.3)
+  );
+      
+
+      /* background: #fff; */
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      
+      font-size: 1.5rem;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .course-row {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 16px;
+      position: relative;
+      border: 1px solid #ddd;
+      padding: 10px;
+      border-radius: 8px;
+    }
+    .course-row input {
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      width: 100%;
+    }
+    .delete-btn {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: #ff4d4d;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 28px;
+      height: 28px;
+      cursor: pointer;
+      font-weight: bold;
+      line-height: 1;
+    }
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .buttons button {
+      padding: 12px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      background-color: #4c14ce;
+      color: white;
+      cursor: pointer;
+      transition: background 0.2s ease-in-out;
+    }
+    .buttons button:hover {
+      background-color: #070000;
+    }
+    .result {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-align: center;
+    }
+   
+
+
+    @media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    padding: 12px;
+  }
+
+  h1 {
+    font-size: 1.1rem;
+  }
+
+  .course-row {
+    padding: 8px;
+  }
+
+  .course-row input {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .buttons button {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .result {
+    font-size: 1rem;
+  }
+}
+
+/* table css start */
+
+  h2 {
+    text-align: center;
+    color: #ffffff;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+  }
+  th, td {
+    border: 1px solid rgb(249, 249, 249);
+    padding: 12px;
+    text-align: center;
+  }
+  th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  /* Responsive styles */
+  @media screen and (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+      display: block;
+    }
+    thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+    tr {
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+    td {
+      border: none;
+      border-bottom: 1px solid #ffffff;
+      position: relative;
+      padding-left: 50%;
+      text-align: left;
+    }
+    td:before {
+      position: absolute;
+      top: 0;
+      left: 6px;
+      width: 45%;
+      padding-right: 10px;
+      white-space: nowrap;
+      content: attr(data-label);
+      font-weight: bold;
+    }
+    /* Specific content for the pseudo-elements */
+    td:nth-of-type(1):before { content: "Numerical Scores"; }
+    td:nth-of-type(2):before { content: "Letter Grade"; }
+    td:nth-of-type(3):before { content: "Grade Point"; }
+  }
+
+  /* table css end */

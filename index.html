@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="Icon" href="img/Untitled design (4).png">
+  <title>CGPA Calculator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>CGPA Calculator</h1>
+    
+
+    <div id="course-container">
+      <div class="course-row">
+        <input type="number" placeholder="Credit Hours">
+        <input type="text" placeholder="SCGPA (A+, A, A-, etc.)">
+        <button class="delete-btn" onclick="deleteCourse(this)">×</button>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button onclick="addCourse()">Add Course</button>
+      <button onclick="calculateCGPA()">Calculate CGPA</button>
+      <button onclick="printResult()">Print/Export Result</button>
+      <button onclick="resetAll()">Reset All</button>
+    </div>
+
+    <div id="result" class="result"></div>
+  </div>
+
+  <h2>Grading Policy for Uttara University</h2>
+<!-- Table start -->
+<table>
+  <thead>
+    <tr>
+      <th>Numerical Scores</th>
+      <th>Letter Grade</th>
+      <th>Grade Point</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>80-100</td>
+      <td>A+</td>
+      <td>4.00</td>
+    </tr>
+    <tr>
+      <td>75-79</td>
+      <td>A</td>
+      <td>3.75</td>
+    </tr>
+    <tr>
+      <td>70-74</td>
+      <td>A-</td>
+      <td>3.50</td>
+    </tr>
+    <tr>
+      <td>65-69</td>
+      <td>B+</td>
+      <td>3.25</td>
+    </tr>
+    <tr>
+      <td>60-64</td>
+      <td>B</td>
+      <td>3.00</td>
+    </tr>
+    <tr>
+      <td>55-59</td>
+      <td>B-</td>
+      <td>2.75</td>
+    </tr>
+    <tr>
+      <td>50-54</td>
+      <td>C+</td>
+      <td>2.50</td>
+    </tr>
+    <tr>
+      <td>45-49</td>
+      <td>C</td>
+      <td>2.25</td>
+    </tr>
+    <tr>
+      <td>40-44</td>
+      <td>D</td>
+      <td>2.00</td>
+    </tr>
+    <tr>
+      <td>00-39</td>
+      <td>F</td>
+      <td>00</td>
+    </tr>
+  </tbody>
+</table>
+<!-- Table end -->
+
+  <script src="script.js"></script> 
+</body>
+
+</html>
